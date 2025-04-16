@@ -224,6 +224,7 @@ body {
     border: none;
     color: #fff;
     background: var(--color-gradient);
+    margin-left: auto;
 }
 
 .prompt-actions .generate-button:hover {
@@ -240,12 +241,32 @@ body {
 }
 
 .gallery-grid .img-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
     position: relative;
     overflow: hidden;
     background: var(--color-input);
     border: 1px solid var(--color-border);
     aspect-ratio: 1;
     border-radius: 16px;
+    transition: all 0.5s ease;
+}
+.gallery-grid .img-card .status-container{
+    padding: 15px;
+    display: none;
+    gap:13px;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery-grid .img-card.loading .status-container{
+    display: flex;
+}
+
+.gallery-grid .img-card:not(.loading):hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10pxx 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-grid .img-card .result-img {
@@ -255,12 +276,17 @@ body {
 
 }
 
+.gallery-grid .img-card.loading:is(.result-img,.img-overlay){
+    display: none;
+}
+
+
 .gallery-grid .img-card .img-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0;
+    opacity:0;
     pointer-events: none;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     padding: 20px;
@@ -284,4 +310,22 @@ body {
 .gallery-grid .img-card .img-download-btn:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.4);
+}
+.gallery-grid .img-card.loading .spinner:not(.status-text){
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid var(--color-border);
+    border-top-color: var(--color-primary);
+    animation: spin 1s linear infinite;
+}
+@keyframes  spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.gallery-grid .img-card .status-text{
+    color: var(--color-placeholder);
+    font-size: 0.85rem;
+    text-align: center;
 }
