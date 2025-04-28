@@ -235,8 +235,8 @@ body {
 
 .main-content .gallery-grid {
     display: grid;
-    gap: 30px;
-    margin-top: 15px;
+    gap: 15px;
+    margin-top: 30px;
     grid-template-columns: repeat(autofill, minmax(180px, 1fr));
 }
 
