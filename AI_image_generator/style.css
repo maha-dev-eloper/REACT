@@ -295,6 +295,16 @@ body {
     transition: all 0.3s ease;
 }
 
+.gallery-grid .img-card:hover .img-overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gallery-grid .img-card:hover{
+    transform:translateY(-5px); 
+    box-shadow: 0 10pxx 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 .gallery-grid .img-card .img-overlay .img-download-btn {
     height: 45px;
     width: 45px;
