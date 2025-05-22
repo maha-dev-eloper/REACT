@@ -92,6 +92,43 @@ nav{
    font-size: 10vw;
    line-height:8vw;
    text-align: right;
-
-
 }
+.page1 video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw; 
+    
+}
+.heroshape{
+    position:absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 65vh;
+}
+.hero-1{
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+.hero-2{
+    background-color: #FE320A;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+.hero-3{
+    background-color: #FE320A;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
