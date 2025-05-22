@@ -1,8 +1,12 @@
+@font-face {
+    font-family: neu hass;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy';
+    font-family: neu hass;
 }
 
 html,body{
@@ -11,14 +15,15 @@ html,body{
 }
 
 .page1{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
     position: relative;
+    padding:0 2vw
     
 } 
 nav{
-    padding: 2vw 2vw;
+    padding: 2vw 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -38,6 +43,8 @@ nav{
     color: #000;
     position: relative;
     font-size: 17px;
+    transition: all 0.4s ease;
+    overflow: hidden;
 }
 .navpart2 h4::after{
     content: '';
@@ -46,8 +53,45 @@ nav{
     width: 100%;
     background-color: black;
     left: 0;
-    bottom:-100%
+    bottom:-100%;
+    border-radius:50%;
+    transition: all 0.4s ease;
 }
 .navpart2 h4:hover::after{
     bottom: 0;
+    border-radius: 0;
+}
+.navpart2 h4 a{
+    text-decoration: none;
+    color: #000;
+    z-index:9;
+    position: relative;
+
+}
+.navpart2 h4:hover a{
+    color:#fff;
+   
+    
+}
+.center{
+    height: 67vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+
+}
+.left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+.center h1{
+   font-size: 10vw;
+   line-height:8vw;
+   text-align: right;
+
+
 }
